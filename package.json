@@ -1,0 +1,24 @@
+{
+  "name": "node-font-collector",
+  "version": "0.0.1",
+  "description": "一键生成中文字体集",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JailBreakC/node-font-collector.git"
+  },
+  "author": "JailBreak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JailBreakC/node-font-collector/issues"
+  },
+  "homepage": "https://github.com/JailBreakC/node-font-collector#readme",
+  "dependencies": {
+    "font-carrier": "0.0.9",
+    "iconv-lite": "^0.4.13",
+    "lodash": "^3.10.1"
+  }
+}
