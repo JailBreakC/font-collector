@@ -1,5 +1,7 @@
 # font-collector 集字
 
+[![npm version](https://badge.fury.io/js/font-collector.svg)](http://badge.fury.io/js/font-collector)
+
 字体库分割工具, 自动解析html、js等文件中的中文，按需压缩生成web所用格式字体文件
 
 # 安装
@@ -12,7 +14,7 @@
 
 - 自动切分压缩(ttf格式)字体文件，导出到指定目录
 
-- 支持导出四中浏览器主流字体 (ttf, eot, woff, svg)
+- 支持导出四种浏览器主流字体 (ttf, eot, woff, svg)
 
 # 使用
 
@@ -64,3 +66,7 @@ font-collector/
 | `.woff` | 9    | 3.6     | 5      | 5.1    | 11.1  | 5.1        | 4.4             | 36                 | 
 | `.ttf`  | --   | 3.5     | 4      | 3.1    | 10.1  | 4.3        | 2.2             | 36                 | 
 | `.svg`  | --   | --      | 4      | 3.2    | 9.6   | 3.2        | 3               | 36                 | 
+
+##  thanks
+
+> <https://github.com/purplebamboo/font-carrier> 提供字体底层操作支持

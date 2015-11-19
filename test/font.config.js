@@ -5,6 +5,6 @@ module.exports = {
 	//源字体文件路径
 	fontPath: 'test/lib/handfont.ttf',
 
-	//字体输出路径
+	//字体输出文件路径
 	outputPath: './test/fonts/handfont'
 }
