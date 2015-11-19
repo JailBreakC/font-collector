@@ -1,0 +1,7 @@
+{
+	"source": "./index.html",
+
+	"font": "./lib/handfont.ttf",
+
+	"output": "./fonts/handfont"
+}

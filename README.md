@@ -30,7 +30,7 @@
         -V, --version            output the version number
 
         // 含中文文件的文件路径或者文件夹
-        -s, --source <path>      character file path or dir
+        -s, --source <path or file>      character file path or dir
 
         // ttf字体文件路径
         -f, --font <path>        origin font file path
