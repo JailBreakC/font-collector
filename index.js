@@ -2,13 +2,16 @@ var fontCarrier = require('font-carrier');
 var collector = require('./lib/collector');
 var font = require('./lib/font');
 
-font.output({
-	sourcePath: './test/index.html',
-	fontPath: 'test/lib/handfont.ttf',
-	outputPath: './test/handfont'
-});
-
-//这里有一大片的中文文文文
+// font.output({
+// 	source: './test/index.html',
+// 	font: 'test/lib/handfont.ttf',
+// 	output: './test/fonts/handfont'
+// });
 
 
-module.exports = collector
+
+
+module.exports = {
+	font: font,
+	collector: collector
+}
