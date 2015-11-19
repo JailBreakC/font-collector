@@ -37,20 +37,22 @@
         -o, --output <filepath>  filepath to output font files
 
 
+
     $ font-collector -f test/lib/handfont.ttf -s test/index.html -o test/fonts/handfont
 
 生成结果如下
 
 ```
 font-collector/
-├── test/
-│   ├── handfont.eot
-│   ├── handfont.svg
-│   ├── handfont.ttf
-│   ├── handfont.woff
-├── lib/
-│   └── handfont.ttf 
-└── index.html
+└── test/
+    ├── fonts/
+    │   ├── handfont.eot
+    │   ├── handfont.svg
+    │   ├── handfont.ttf
+    │   ├── handfont.woff
+    ├── lib/
+    │   └── handfont.ttf 
+    └──index.html
 
 ```
 
