@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "一键生成中文字体集",
   "main": "index.js",
-  "bin": {"font-collector": "bin/font-collector.js"},
+  "bin": {
+    "font-collector": "bin/font-collector.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JailBreakC/font-collector.git"
@@ -18,6 +20,7 @@
     "argv": "0.0.2",
     "commander": "^2.9.0",
     "font-carrier": "0.0.9",
+    "glob": "^6.0.1",
     "iconv-lite": "^0.4.13",
     "lodash": "^3.10.1",
     "mkdirp": "^0.5.1"

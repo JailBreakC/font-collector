@@ -38,7 +38,7 @@
         // 输出字体的文件路径
         -o, --output <filepath>  filepath to output font files
 
-
+示例命令：
 
     $ font-collector -f test/lib/handfont.ttf -s test/index.html -o test/fonts/handfont
 
