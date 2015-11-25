@@ -1,7 +1,7 @@
 {
 	"source": {
-		"path": "./index.html",
-		"ignore": ["./others/*.txt"]
+		"path": "**/*",
+		"ignores": ["./others/*.txt", "fonts/"]
 	},
 
 	"font": "./lib/handfont.ttf",
