@@ -18,7 +18,7 @@
 
 # 使用
 
-命令行：
+## 命令行：
 
     font-collector -h
 
@@ -38,11 +38,11 @@
         // 输出字体的文件路径
         -o, --output <filepath>  filepath to output font files
 
-示例命令：
+### 示例命令：
 
     $ font-collector -f test/lib/handfont.ttf -s test/index.html -o test/fonts/handfont
 
-生成结果如下
+### 生成结果如下
 
 ```
 font-collector/
@@ -57,6 +57,62 @@ font-collector/
     └──index.html
 
 ```
+
+## 配置文件：
+
+`推荐` 可以使用配置文件的方式保存配置，方便构建。配置文件默认名称为 `font.config.json` 放在工程根目录。
+
+执行 `font-collector` 命令会自动读取当前目录下的配置文件。配置文件格式如下：
+
+    
+    {
+        "source": {
+            "path": ["pattern", "another/pattern"],
+            "ignore": ["ignore/pattern", "another/ignore/pattern"]
+        },
+
+        "font": "origin/font/path",
+
+        "output": "output/fonts/path"
+    }
+
+source.path : 含中文字符文件目录，字符串或者数组，支持路径通配符;
+
+source.ignore : （可选) 不想被匹配的文件目录，字符串或者数组，支持路径通配符;
+
+font: 字体源文件路径;
+
+output: 输出字体文件路径; ps: 需指定文件名并且不带后缀;
+例：fonts/myfont; 会生成 fonts/myfont.eot | svg | ttf | woff四种字体
+
+### 示例配置文件:
+
+搜索app文件夹下所有文件
+
+    {
+        "source": {
+            "path": "app/**/*",
+        },
+
+        "font": "./lib/handfont.ttf",
+
+        "output": "./fonts/handfont"
+    }
+
+搜索当前目录所有文件，不包括fonts文件夹中文件，不包括lib文件夹中.tff文件
+
+    {
+        "source": {
+            "path": "**/*",
+            "ignore": ["fonts/*", "lib/*.ttf"]
+        },
+
+        "font": "./lib/handfont.ttf",
+
+        "output": "./fonts/handfont"
+    }
+
+
 
 ## 字体兼容性
 
