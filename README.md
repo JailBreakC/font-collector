@@ -18,11 +18,13 @@
 
 # 使用
 
+可以使用命令行参数，和配置文件方式使用此工具
+
 ## 命令行：
 
     font-collector -h
 
-        Usage: font-collector [options] <file or dir ...>
+        Usage: font-collector [options] <path pattern or filepath ...>
 
     Options:
 
@@ -30,13 +32,19 @@
         -V, --version            output the version number
 
         // 含中文文件的文件路径或者文件夹
-        -s, --source <path or file>      character file path or dir
+        -s, --source <path or file>      path pattern
+
+        // （可选） 忽略文件路径
+        -i, --ignore <path>      ignore path pattern
 
         // ttf字体文件路径
         -f, --font <path>        origin font file path
 
         // 输出字体的文件路径
         -o, --output <filepath>  filepath to output font files
+
+        // 指定配置文件路径
+        -c, --config <filepath>  load font.config.json file to run compile mission or set config file
 
 ### 示例命令：
 
@@ -62,7 +70,11 @@ font-collector/
 
 `推荐` 可以使用配置文件的方式保存配置，方便构建。配置文件默认名称为 `font.config.json` 放在工程根目录。
 
-执行 `font-collector` 命令会自动读取当前目录下的配置文件。配置文件格式如下：
+执行 `font-collector` 命令会自动读取当前目录下的配置文件
+
+手动指定配置文件： `font-collector -c myfont.confong.json`
+
+配置文件格式如下：
 
     
     {
@@ -83,11 +95,14 @@ source.ignore : （可选) 不想被匹配的文件目录，字符串或者数�
 font: 字体源文件路径;
 
 output: 输出字体文件路径; ps: 需指定文件名并且不带后缀;
+
 例：fonts/myfont; 会生成 fonts/myfont.eot | svg | ttf | woff四种字体
 
 ### 示例配置文件:
 
 搜索app文件夹下所有文件
+
+    font.config.json
 
     {
         "source": {
@@ -100,6 +115,8 @@ output: 输出字体文件路径; ps: 需指定文件名并且不带后缀;
     }
 
 搜索当前目录所有文件，不包括fonts文件夹中文件，不包括lib文件夹中.tff文件
+
+    font.config.json
 
     {
         "source": {

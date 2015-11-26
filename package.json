@@ -1,6 +1,6 @@
 {
   "name": "font-collector",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "一键生成中文字体集",
   "main": "index.js",
   "bin": {

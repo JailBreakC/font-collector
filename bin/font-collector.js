@@ -6,11 +6,12 @@ var collector = require('../').collector;
 var fs = require('fs');
 program
     .version(require('../package.json').version)
-    .usage('[options] <file or dir ...>')
-    .option('-s, --source <path>', 'character file path or dir')
+    .usage('[options] <path pattern or filepath ...>')
+    .option('-s, --source <path>', 'path pattern')
+    .option('-i, --ignore <path>', 'ignore path pattern')
     .option('-f, --font <path>', 'origin font file path')
     .option('-o, --output <filepath>', 'filepath to output font files')
-    .option('-c, --compile [file]', 'load font.config.json file to run compile mission or set [file]', './font.config.json')
+    .option('-c, --config <filepath>', 'load font.config.json file to run compile mission or set config file', './font.config.json')
     .parse(process.argv);
 
 var checkParams = function() {
@@ -40,9 +41,18 @@ var err = checkParams();
 if(err) {
 	console.log(err);
 } else {
+	var config = {};
+	config.source = {};
+	program.source.path = program.source;
+	program.source.ignore = program.ignore;
+	program.font = program.font;
+	program.output = program.output;
+
 	console.log('source' + program.source);
+	program.ignore && console.log('ignore' + program.ignore);
 	console.log('font' + program.font);
 	console.log('output' + program.output);
+
 	font.output(program);
 }
 
